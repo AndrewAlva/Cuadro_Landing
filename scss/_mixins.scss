@@ -21,3 +21,17 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(($val * 100))';
 }
+
+@mixin boxFit(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin smoothFont(){
+	-webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+    	-ms-font-smoothing: antialiased;
+    	 -o-font-smoothing: antialiased;
+    		font-smoothing: antialiased;
+}
