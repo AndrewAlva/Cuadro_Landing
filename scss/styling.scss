@@ -22,10 +22,11 @@
 		.innerWrap{
 			position: absolute;
 			width: 100%;
+			min-width: 320px;
 			height: 100%;
 			margin: auto;
 			top: 0; bottom: 0; left: 0; right: 0;
-			overflow: scroll;
+			overflow: hidden;
 			background-color: $mbrtWhite;
 
 			#isoCuadro{
@@ -48,6 +49,7 @@
 					font-weight: 700;
 					text-align: center;
 					text-transform: capitalize;
+					cursor: default;
 
 					// Required, since we're setting absolute on pseudo-elements
 					position: absolute;
@@ -142,7 +144,7 @@
 
 			#dataCuadro{
 				position: absolute;
-				width: 330px;
+				width: 320px;
 				height: 70px;
 				margin: auto;
 				left: 0; right: 0;
@@ -182,18 +184,69 @@
 		}
 	}
 
-	.crystal{
-		@include opacity(0);
-		display: none;
+	// Animation helper classes
+		.crystal{
+			@include opacity(0);
+			display: none;
+		}
+
+		.animateObj{
+			@include opacity(0);
+			-webkit-transform: translateY(7px);
+			   -moz-transform: translateY(7px);
+			    -ms-transform: translateY(7px);
+			     -o-transform: translateY(7px);
+			        transform: translateY(7px);
+		}
+
+
+	// Responsive styling
+
+	@media (max-width: 1024px) {
+		#mbrtWrap{
+			.innerWrap{
+				#dataCuadro{
+					bottom: 80px;
+				}
+			}
+		}
 	}
 
-	.animateObj{
-		@include opacity(0);
-		-webkit-transform: translateY(7px);
-		   -moz-transform: translateY(7px);
-		    -ms-transform: translateY(7px);
-		     -o-transform: translateY(7px);
-		        transform: translateY(7px);
+	@media (max-width: 768px) {
+		#mbrtWrap{
+			.innerWrap{
+				#dataCuadro{
+					bottom: 50px;
+
+					.line{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		#mbrtWrap{
+			.innerWrap{
+				#isoCuadro{
+					bottom: 80px;
+				}
+
+				#dataCuadro{
+					height: 50px;
+					bottom: 30px;
+
+					.line{
+						font-size: 12px;
+						line-height: 25px;
+					}
+					.secondLine{
+						top: -5px;
+					}
+				}
+			}
+		}
 	}
 
 // END MANDELBROT style

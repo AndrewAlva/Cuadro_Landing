@@ -9,7 +9,7 @@ $(document).ready(function() {
 			$('.animateObj').each(function(index, el) {
 				setTimeout(function(){
 					$(el).removeClass('animateObj');
-				}, (index * 250));
+				}, (index * 200));
 			});
 		}, 1800);
 	}, 100);

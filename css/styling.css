@@ -13,13 +13,14 @@
   #mbrtWrap .innerWrap {
     position: absolute;
     width: 100%;
+    min-width: 320px;
     height: 100%;
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: scroll;
+    overflow: hidden;
     background-color: #fff; }
     #mbrtWrap .innerWrap #isoCuadro {
       position: absolute;
@@ -43,6 +44,7 @@
         font-weight: 700;
         text-align: center;
         text-transform: capitalize;
+        cursor: default;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -107,7 +109,7 @@
         transition: all 0.8s ease-out; }
     #mbrtWrap .innerWrap #dataCuadro {
       position: absolute;
-      width: 330px;
+      width: 320px;
       height: 70px;
       margin: auto;
       left: 0;
@@ -159,5 +161,25 @@
   -ms-transform: translateY(7px);
   -o-transform: translateY(7px);
   transform: translateY(7px); }
+
+@media (max-width: 1024px) {
+  #mbrtWrap .innerWrap #dataCuadro {
+    bottom: 80px; } }
+@media (max-width: 768px) {
+  #mbrtWrap .innerWrap #dataCuadro {
+    bottom: 50px; }
+    #mbrtWrap .innerWrap #dataCuadro .line {
+      font-size: 14px; } }
+@media (max-width: 500px) {
+  #mbrtWrap .innerWrap #isoCuadro {
+    bottom: 80px; }
+  #mbrtWrap .innerWrap #dataCuadro {
+    height: 50px;
+    bottom: 30px; }
+    #mbrtWrap .innerWrap #dataCuadro .line {
+      font-size: 12px;
+      line-height: 25px; }
+    #mbrtWrap .innerWrap #dataCuadro .secondLine {
+      top: -5px; } }
 
 /*# sourceMappingURL=styling.css.map */
