@@ -107,6 +107,8 @@
         -ms-transition: all 0.8s ease-out;
         -o-transition: all 0.8s ease-out;
         transition: all 0.8s ease-out; }
+        #mbrtWrap .innerWrap #isoCuadro #logoCuadro img {
+          width: 100%; }
     #mbrtWrap .innerWrap #dataCuadro {
       position: absolute;
       width: 320px;
@@ -172,7 +174,15 @@
       font-size: 14px; } }
 @media (max-width: 500px) {
   #mbrtWrap .innerWrap #isoCuadro {
+    width: 120px;
+    height: 120px;
     bottom: 80px; }
+    #mbrtWrap .innerWrap #isoCuadro .patchOutline {
+      width: calc(100% - 10px);
+      height: calc(100% - 10px); }
+    #mbrtWrap .innerWrap #isoCuadro #logoCuadro {
+      width: 80px;
+      height: 21px; }
   #mbrtWrap .innerWrap #dataCuadro {
     height: 50px;
     bottom: 30px; }
